@@ -1,0 +1,1 @@
+Those models should be integrated inside the Ovation framework. Inside aguilarModel/dataConll2003 and aguilarModel/dataTwitter there are two interesting datasets that should also be loaded in the framework.
