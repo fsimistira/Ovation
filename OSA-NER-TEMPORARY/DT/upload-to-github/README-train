@@ -1,0 +1,1 @@
+python trainModel.py en data ADDRESS model_data_street

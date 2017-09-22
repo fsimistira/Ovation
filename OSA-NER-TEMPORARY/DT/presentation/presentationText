@@ -1,0 +1,54 @@
+>NER for ADDRESS
+>>User generating synthetic corpus 
+
+Training set - synth.address.corpus
+
+How? TODO:STEFANO
+
+10k sentences containing ADDRESS entities
+
+Example
+
+Good afternoon, I'd <ADDRESS_start>Kantstraße 152, Berlin, Germany<ADDRESS_end> like to book a trip with my son from August 18 to August 29. He and I would be leaving from Curitiba. What destinations can you offer?
+:smile: <ADDRESS_start>Am Treptower Park 32, Berlin, Germany<ADDRESS_end>
+Anything with <ADDRESS_start>Lychener Straße 33, Berlin, Germany<ADDRESS_end> a higher rated hotel?
+<ADDRESS_start>Blankenfelde, Berlin, Germany<ADDRESS_end> Try Cleveland
+<ADDRESS_start>Olafstraße 65, Berlin, Germany<ADDRESS_end> detroit
+Yes, I just need <ADDRESS_start>Kantstraße 110, Berlin, Germany<ADDRESS_end> to get back by Sepetember 12.
+Can I get <ADDRESS_start>Alt-Moabit 52, Berlin, Germany<ADDRESS_end> more information for Manaus?
+<ADDRESS_start>Regensburger Straße 7, Berlin, Germany<ADDRESS_end> no dates just me i think
+<ADDRESS_start>An der Urania 16-18, Berlin, Germany<ADDRESS_end> i need to book a trip to rio de janeiro
+I think the Marseille trip is the best since there’s a spa. Is there a spa in the hotel <ADDRESS_start>Kirschenallee 13, Berlin, Germany<ADDRESS_end> in Frankfurt?
+
+Test set
+56 sentences
+
+>> Training NER model
+Using synthetic dataset synth.address.corpus
+entityGroup ADDRESS
+entityItems StreetName StreetNumber ZIPcode CITY COUNTRY
+
+>> Testing NER model
+
+Example #1
+Hello, I am thinking about to move in Mitte the next year.
+Maybe near Alexanderplatz.
+ADDRESS: Alexanderplatz.
+Can you tell me if in that case I can move my insurance to the new home?
+I will not take an house bigger than 100m2.
+AREA: 100m2.
+Thank you, bye.
+I am very upset because you didn't want to make a special price for my appartment in Jasmunder str.
+ADDRESS: Jasmunder str.
+After all I am your customer since January 1982, I still lived in DDR!
+
+
+Example  #2
+Thousands of demonstrators have marched through Ragower Weg 270, Berlin to protest the war in Pfarrer-Lenzel-Straße 251 and demand the withdrawal of British troops from that country .
+ADDRESS: Ragower Weg 270, Berlin
+ADDRESS: Pfarrer-Lenzel-Straße 251
+
+The Hausburgstrasse 205, Berlin march came ahead of anti-war protests today in other cities , including Eppinger Strasse 110, Berlin , Jathoweg 93 , and Fanny-Zobel-Straße 202 .
+ADDRESS:  The Hausburgstrasse 205, Berlin
+ADDRESS: Eppinger Strasse 110, Berlin , Jathoweg 93 , and Fanny-Zobel-Straße 202 .
+
